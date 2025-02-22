@@ -1,3 +1,5 @@
-const PATH_DB = './src/db/db.json';
+const path = require('path');
+
+const PATH_DB = path.join(__dirname, '../db/db.json'); // ✅ Шлях до файлу БД
 
 module.exports = { PATH_DB };
