@@ -1,7 +1,7 @@
-const fs = require('fs/promises');
-const { PATH_DB } = require('../constants/contacts'); // ✅ Імпортуємо шлях до БД
+import fs from 'fs/promises';
+import { PATH_DB } from '../constants/contacts.js';
 
-async function writeContacts(contacts) {
+export async function writeContacts(contacts) {
   try {
     await fs.writeFile(PATH_DB, JSON.stringify(contacts, null, 2));
   } catch (error) {
@@ -9,7 +9,19 @@ async function writeContacts(contacts) {
   }
 }
 
-module.exports = { writeContacts };
+
+// const fs = require('fs/promises');
+// const { PATH_DB } = require('../constants/contacts'); // ✅ Імпортуємо шлях до БД
+
+// async function writeContacts(contacts) {
+//   try {
+//     await fs.writeFile(PATH_DB, JSON.stringify(contacts, null, 2));
+//   } catch (error) {
+//     console.error('Error writing contacts:', error.message);
+//   }
+// }
+
+// module.exports = { writeContacts };
 
 // const fs = require('fs').promises;
 // //import { PATH_DB } from '../constants/contacts.js';

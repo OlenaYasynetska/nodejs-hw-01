@@ -2,17 +2,23 @@
   "name": "nodejs-hw-01",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
 
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "node src/scripts/generateContacts.js"
+    "generate": "node src/scripts/generateContacts.js",
+    "get-all": "node src/scripts/getAllContacts.js",
+    "add-one": "node src/scripts/addOneContact.js",
+    "count": "node src/scripts/countContacts.js",
+    "remove-last": "node src/scripts/removeLastContact.js",
+    "remove-all": "node src/scripts/removeAllContacts.js"
+  
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@faker-js/faker": "^9.5.0"
+   "@faker-js/faker": "^9.5.0"
   }
 }
